@@ -19,10 +19,19 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button @click="add(5)">Add 5</button>
-      <button @click="add(-5)">Remove 5</button>
+      <button @click.prevent.right="add(-5)">Remove 5</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" @input="setName($event,'!!!')" />
+      <input
+        type="text"
+        @input="setName($event,'!!!')"
+        @keyup.enter="confirmInput()"
+      />
       <p>name: {{name}}</p>
+      <p>confirm name: {{confirmName}}</p>
+      <form @submit.prevent="submitForm">
+        <input type="text" />
+        <button>Sign up</button>
+      </form>
     </section>
   </body>
 </html>
