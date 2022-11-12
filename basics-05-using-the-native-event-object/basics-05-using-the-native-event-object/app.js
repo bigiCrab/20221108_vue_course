@@ -7,7 +7,6 @@ const app = Vue.createApp({
   },
   methods: {
     outputFullName() {
-      console.log("🚀 ~ file: app.js ~ line 10 ~ outputFullName ~ outputFullName")
       if (this.name === "") {
         return "";
       }
@@ -26,6 +25,15 @@ const app = Vue.createApp({
     resetName() {
       this.name = "";
     },
+  },
+  computed: {
+    fullname(){
+      console.log("🚀 ~ file: app.js ~ line 31 ~ fullname ~ fullname")
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "!!!";
+    }
   },
 });
 
