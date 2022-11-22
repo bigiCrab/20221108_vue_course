@@ -20,9 +20,7 @@
       <div
         class="demo"
         @click="selectBox('A')"
-        :class="{
-          active:boxASelected
-        }"
+        :class="boxAClasses"
       ></div>
       <div class="demo" @click="selectBox('B')"></div>
       <div class="demo" @click="selectBox('C')"></div>
