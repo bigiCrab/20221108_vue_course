@@ -18,9 +18,8 @@
     </header>
     <section id="styling">
       <div
-        class="demo"
         @click="selectBox('A')"
-        :class="boxAClasses"
+        :class="['demo',boxAClasses]"
       ></div>
       <div class="demo" @click="selectBox('B')"></div>
       <div class="demo" @click="selectBox('C')"></div>
