@@ -8,10 +8,15 @@ Vue.createApp({
   },
   methods: {
     selectBox(box) {
-      this[`box${box}Selected`] = !this[`box${box}Selected`] ;
-      console.log('A',this.boxASelected);
-      console.log('B',this.boxBSelected);
-      console.log('C',this.boxCSelected);
+      this[`box${box}Selected`] = !this[`box${box}Selected`];
+      console.log("A", this.boxASelected);
+      console.log("B", this.boxBSelected);
+      console.log("C", this.boxCSelected);
+    },
+  },
+  computed: {
+    boxAClasses() {
+      return { active: this.boxASelected };
     },
   },
 }).mount("#styling");

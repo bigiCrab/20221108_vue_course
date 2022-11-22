@@ -20,10 +20,10 @@
       <div
         class="demo"
         @click="selectBox('A')"
-        :style="{
-          borderColor:boxASelected?'red':'#333'
+        :class="{
+          active:boxASelected
         }"
-        ></div>
+      ></div>
       <div class="demo" @click="selectBox('B')"></div>
       <div class="demo" @click="selectBox('C')"></div>
     </section>
